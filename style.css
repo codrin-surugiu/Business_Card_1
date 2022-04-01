@@ -1,0 +1,73 @@
+body {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 9%,
+    rgba(9, 96, 121, 1) 39%,
+    rgba(0, 212, 255, 1) 66%
+  );
+}
+
+.container {
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+/* Aici incepe stilizarea Cardului */
+.section {
+  border-radius: 10% 0 0 70%;
+  background-color: white;
+  display: flex;
+  width: 800px;
+  height: 450px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.picture {
+  display: flex;
+  width: 300px;
+  height: 450px;
+  border-radius: 0 0 80%;
+  background-image: url(./Pictures/DSC02647.JPG);
+  background-position: right;
+  background-size: cover;
+}
+
+.cardName {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cardName h1 {
+  color: rgba(63, 181, 236, 0.931);
+  text-shadow: 2px 2px 4px #000000;
+  font-family: "Lobster", cursive;
+  font-size: xxx-large;
+}
+
+.cardName p {
+  font-family: "Cookie", cursive;
+  font-size: medium;
+  font-weight: 400;
+}
+
+.cardName b {
+  color: rgb(60, 11, 153);
+}
+.btns {
+  display: flex;
+  width: 600px;
+  height: 35px;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
