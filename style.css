@@ -1,12 +1,12 @@
 body {
   display: flex;
   justify-content: center;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 9%,
-    rgba(9, 96, 121, 1) 39%,
-    rgba(0, 212, 255, 1) 66%
-  );
+  background-color: #20022c;
+}
+
+@font-face {
+  font-family: Charles;
+  src: url(./Fonts/CharlesElegant-Light.ttf);
 }
 
 .container {
@@ -19,20 +19,23 @@ body {
 
 /* Aici incepe stilizarea Cardului */
 .section {
-  border-radius: 10% 0 0 70%;
-  background-color: white;
-  display: flex;
   width: 800px;
   height: 450px;
+  background-color: #010048;
+  /* border: 5px solid black; */
+  border-radius: 4rem;
+  box-shadow: 0 11px 29px;
+  display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .picture {
   display: flex;
-  width: 300px;
-  height: 450px;
-  border-radius: 0 0 80%;
+  width: 160px;
+  height: 160px;
+  margin: 1rem;
+  border-radius: 50%;
   background-image: url(./Pictures/DSC02647.JPG);
   background-position: right;
   background-size: cover;
@@ -40,18 +43,19 @@ body {
 
 .cardName {
   width: 600px;
-  height: 400px;
+  height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-end;
 }
 
 .cardName h1 {
-  color: rgba(63, 181, 236, 0.931);
+  color: white;
   text-shadow: 2px 2px 4px #000000;
-  font-family: "Lobster", cursive;
+  font-family: Charles;
   font-size: xxx-large;
+  margin-right: 1rem;
 }
 
 .cardName p {
@@ -64,10 +68,53 @@ body {
   color: rgb(60, 11, 153);
 }
 .btns {
+  width: 10rem;
+  height: 25rem;
+  margin-left: 11px;
   display: flex;
-  width: 600px;
-  height: 35px;
-  align-items: center;
+  align-items: stretch;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  position: absolute;
+}
+
+.btns a {
+  font-family: "Big Shoulders Stencil Display", cursive;
+  font-size: xx-large;
+}
+
+.btns i {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.add {
+  color: #b537f2;
+  height: 3rem;
+  border-radius: 0 10vh 10vh 0;
+  margin: 5px 0;
+  border: 1px solid #b537f2;
+  box-shadow: 0 5px 10px black;
+  display: flex;
   flex-direction: row-reverse;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.message {
+  color: white;
+  height: 3rem;
+  background-color: #b537f2;
+  border-radius: 0 10vh 10vh 0;
+  margin: 5px 0;
+  border: 1px solid #b537f2;
+  box-shadow: 0 5px 10px black;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.message i {
+  margin-right: 3vh;
 }
