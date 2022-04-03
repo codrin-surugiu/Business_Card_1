@@ -1,7 +1,24 @@
 body {
-  display: flex;
-  justify-content: center;
-  background-color: #20022c;
+  background: linear-gradient(-45deg, #110273, #b16cdf, #1cc0cd);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+@font-face {
+  font-family: Flexible;
+  src: url(./Fonts/Demo_Fonts/Fontspring-DEMO-flexible-h200w500.otf);
 }
 
 @font-face {
@@ -9,12 +26,20 @@ body {
   src: url(./Fonts/CharlesElegant-Light.ttf);
 }
 
+p {
+  width: 50vh;
+  color: white;
+  font-family: Charles;
+  font-size: 33px;
+  font-weight: 400;
+}
+
 .container {
-  height: 900px;
+  height: 950px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: row;
 }
 
 /* Aici incepe stilizarea Cardului */
@@ -22,12 +47,14 @@ body {
   width: 800px;
   height: 450px;
   background-color: #010048;
-  /* border: 5px solid black; */
   border-radius: 4rem;
   box-shadow: 0 11px 29px;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: flex-start;
 }
 
 .picture {
@@ -51,26 +78,64 @@ body {
 }
 
 .cardName h1 {
+  height: 15px;
   color: white;
-  text-shadow: 2px 2px 4px #000000;
-  font-family: Charles;
-  font-size: xxx-large;
-  margin-right: 1rem;
+  font-family: Flexible;
+  font-weight: 100;
+  font-size: 6rem;
+  margin-right: 3rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 
-.cardName p {
-  font-family: "Cookie", cursive;
-  font-size: medium;
-  font-weight: 400;
+.cardName h6 {
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 .cardName b {
-  color: rgb(60, 11, 153);
+  color: rgb(184, 101, 223);
+}
+
+.skills {
+  width: 33rem;
+  border-top: 2px solid white;
+}
+
+.unset-links {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.unset-links a {
+  width: 5rem;
+  height: 3rem;
+  text-decoration: none;
+  font-family: "Big Shoulders Stencil Display", cursive;
+  font-size: x-large;
+  font-weight: 600;
+  color: white;
+  border-radius: 10vh;
+  margin: 10px;
+  border: 1px solid #b537f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .btns {
-  width: 10rem;
-  height: 25rem;
+  width: 11rem;
+  height: 23rem;
   margin-left: 11px;
+  padding: 1rem;
   display: flex;
   align-items: stretch;
   flex-direction: column-reverse;
@@ -90,7 +155,7 @@ body {
 
 .add {
   color: #b537f2;
-  height: 3rem;
+  height: 4rem;
   border-radius: 0 10vh 10vh 0;
   margin: 5px 0;
   border: 1px solid #b537f2;
@@ -103,7 +168,7 @@ body {
 
 .message {
   color: white;
-  height: 3rem;
+  height: 4rem;
   background-color: #b537f2;
   border-radius: 0 10vh 10vh 0;
   margin: 5px 0;
